@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os 
+import os
 
 if os.path.exists('env.py'):
     import env
@@ -32,7 +32,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-=gy4zdr%z!gc(msk^m2jehlhuew8ve=@kd5%o4zcj!@ucowasc'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
