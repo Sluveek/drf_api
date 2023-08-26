@@ -65,7 +65,11 @@ SECRET_KEY = "SECRET_KEY"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "drf-api777.herokuapp.com"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "drf-api777-490a96ec82c3.herokuapp.com",
+    "127.0.0.1",
+]
 
 
 # Application definition
