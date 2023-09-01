@@ -14,12 +14,15 @@ from pathlib import Path
 import os
 import dj_database_url
 
-if os.path.exists("env.py"):
-    import env
-
-CLOUDINARY_STORAGE = {"CLOUDINARY_URL": os.environ.get("CLOUDINARY_URL")}
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "dbjtty0vi",
+    "API_KEY": "371584321444324",
+    "API_SECRET": "-_m9qMb3BFnF08Fyz505aHVAUh8",
+}
+print("cloudinary", CLOUDINARY_STORAGE)
 MEDIA_URL = "/media/"
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -111,12 +114,17 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "corsheaders.middleware.CorsMiddleware",
 ]
+
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+
+"""
 if "CLIENT_ORIGIN" in os.environ:
-    CORS_ALLOWED_ORIGINS = [os.environ.get("CLIENT_ORIGIN")]
+    CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
 else:
     CORS_ALLOWED_ORIGIN_REGEXES = [
         r"^https://.*\.gitpod\.io$",
     ]
+"""
 CORS_ALLOW_CREDENTIALS = True
 JWT_AUTH_COOKIE = "my-app-auth"
 JWT_AUTH_REFRESH_COOKE = "my-refresh-token"
