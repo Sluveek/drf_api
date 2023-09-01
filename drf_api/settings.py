@@ -66,8 +66,7 @@ SECRET_KEY = "SECRET_KEY"
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "localhost:3000",
-    "drf-api777-490a96ec82c3.herokuapp.com",
+    "192.168.0.220" "drf-api777-490a96ec82c3.herokuapp.com",
     "127.0.0.1",
 ]
 
